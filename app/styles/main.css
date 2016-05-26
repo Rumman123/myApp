@@ -1,0 +1,95 @@
+body {
+    font-family: 'Hind', sans-serif;
+    font-size:16px;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+#banner {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#banner img {
+    width: 100%;
+}
+
+.banner-content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    right: 0;
+    left: 0;
+    color: #fff;
+    text-align: center;
+    padding: 50px;
+    border-bottom: 6px solid #FBBC05;
+}
+
+.banner-content p {
+    margin:10px;
+}
+
+.banner-content__heading {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FBBC05;
+}
+
+.banner-content__dummy {
+    display: none;
+}
+
+#content {
+    padding: 20px;
+}
+
+ul li {
+    margin: 10px 0 15px;
+}
+
+#content li h4 {
+    color: #EA4335;
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 10px 0;
+    text-shadow: 1px 1px 3px rgba(225, 156, 150, 1);
+}
+
+#content li p {
+    text-transform: capitalize;
+    line-height: 25px;
+    font-weight: 400;
+}
+
+.signIn-button {
+    padding: 10px 20px;
+    background: transparent;
+    color: #fff;
+    font-weight: bold;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+.signIn-button:hover {
+   background: #ffffff;
+   color: #000;
+}
+
+.add-content {
+    margin-left: 20px;
+    display: inline-block;
+    border-bottom: 2px solid #FBBC05;
+    padding-bottom: 4px;
+    cursor: pointer;
+}
+
+.add-content:hover {
+    color: #FBBC05;
+    border-bottom-color: #fff;
+}

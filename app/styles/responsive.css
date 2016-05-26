@@ -1,0 +1,55 @@
+@media (min-width:768px) {
+
+    .wrapper {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .banner-content__heading {
+        font-size: 40px;
+    }
+
+    .banner-content p {
+        margin: 40px 0;
+    }
+
+    .banner-content__description {
+        font-size: 25px;
+    }
+
+    .banner-content__text {
+        font-size: 20px;
+    }
+
+    #banner .banner-content__dummy {
+        display: block;
+        margin: 26px 0;
+        font-size: 15px;
+        color: #ccc;
+    }
+
+    #content {
+        padding: 40px 0;
+    }
+
+    #content li {
+        margin-bottom: 30px;
+    }
+
+    #content li h4 {
+        font-size: 26px;
+    }
+}
+@media (min-width:992px) {
+    .wrapper {
+        width: 990px;
+    }
+
+    .banner-content {
+        padding: 90px 0;
+    }
+
+    #banner .banner-content__dummy {
+        margin: 100px 0;
+    }
+}
