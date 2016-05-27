@@ -39,6 +39,22 @@
     #content li h4 {
         font-size: 26px;
     }
+
+    .add-content {
+        font-size: 26px;
+    }
+
+    .addContent--heading {
+        font-size: 30px;
+    }
+
+    .contentForm {
+        padding: 20px;
+        max-width: 600px;
+        border: 1px solid #ccc;
+        margin: 30px auto;
+        width: 100%;
+    }
 }
 @media (min-width:992px) {
     .wrapper {

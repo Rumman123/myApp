@@ -1,5 +1,5 @@
      <!--banner section -->
-    <section id="banner">
+    <section id="banner" ng-controller="MainCtrl as main">
 
             <img src="../images/Laptop-coffee-cup.jpg" alt="banner">
 
@@ -9,24 +9,20 @@
                     <p class="banner-content__description">Frontend Engineer</p>
                     <p class="banner-content__text">HTML 5, JavaScript, CSS 3, Angular Js, jQuery </p>
                     <p class="banner-content__dummy">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vel velit finibus, mollis odio vitae, luctus sem. Aliquam velit ex, rhoncus ut sagittis sed, lacinia eget risus. Phasellus feugiat lacus eu enim aliquet,
-                        a semper nunc euismod. Mauris porttitor ligula pellentesque, porta dolor eget, sodales mauris. </p>
-                    <button type="button" class="signIn-button">Sign In</button>
+                    a semper nunc euismod. Mauris porttitor ligula pellentesque, porta dolor eget, sodales mauris. </p>
+                  <!--  <button type="button" class="signIn-button">Sign In</button>-->
                     <a ui-sref="content" class="add-content">Add Content</a>
                 </div>
         </div>
     </section>
 
      <!--content section -->
-     <section id="content">
+     <section id="content" ng-controller="MainCtrl as main">
          <div class="wrapper">
              <ul>
-                 <li>
-                     <h4>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h4>
-                     <p>est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla</p>
-                 </li>
-                 <li>
-                     <h4>sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h4>
-                     <p>est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla</p>
+                 <li ng-repeat="content in main.contents">
+                     <h4>{{content.title}}</h4>
+                     <p>{{content.body}}</p>
                  </li>
              </ul>
          </div>

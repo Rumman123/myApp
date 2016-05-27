@@ -1,0 +1,38 @@
+<h4 class="addContent--heading">Here you can add content in your site</h4>
+
+<section id="form" ng-controller="ContentCtrl as content">
+  <div class="wrapper">
+    <form name="contentForm" novalidate
+          rc-submit="content.send()" class="contentForm">
+      <p class="contentForm-status">{{content.status}}</p>
+      <div class="form-group"
+           ng-class="{'has-error': rc.contentForm.needsAttention(contentForm.id)}">
+        <label>Id<span>*</span></label>
+        <input class="form-control" name="id" type="number"
+               placeholder="Enter content Id" required ng-model="content.id" />
+             <span class="help-block"
+                   ng-show="contentForm.id.$error.required">Required</span>
+      </div>
+      <div class="form-group"
+           ng-class="{'has-error': rc.contentForm.needsAttention(contentForm.title)}">
+        <label>Content Title<span>*</span></label>
+        <input class="form-control" name="title" type="text"
+               placeholder="Enter content title" required ng-model="content.title" />
+             <span class="help-block"
+                   ng-show="contentForm.title.$error.required">Required</span>
+      </div>
+      <div class="form-group"
+           ng-class="{'has-error': rc.contentForm.needsAttention(contentForm.detail)}">
+        <label>Content Detail <span>*</span></label>
+        <textarea class="form-control" name="detail"
+               placeholder="Enter content detail" required ng-model="content.detail" /></textarea>
+             <span class="help-block"
+                   ng-show="contentForm.detail.$error.required">Required</span>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="content-submit" value="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+</section>
+

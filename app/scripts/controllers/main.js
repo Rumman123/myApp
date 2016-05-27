@@ -2,16 +2,23 @@
 
 /**
  * @ngdoc function
- * @name myAppApp.controller:MainCtrl
+ * @name myApp.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the myAppApp
+ * Controller of the myApp
  */
-angular.module('myAppApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+myApp.controller('MainCtrl',['dataService',function (dataService) {
+  var vm = this;
+
+  fetchContent();
+
+  function fetchContent() {
+      dataService.getContent()
+      .then(function(response){
+        vm.contents = response.data;
+      },
+      function(error){
+        alert("content is not loaded");
+      });
+  }
+}]);

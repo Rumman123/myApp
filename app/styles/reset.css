@@ -46,6 +46,6 @@ table {
 * {
     box-sizing: border-box;
 }
-a {
+a, a:hover {
     text-decoration: none;
 }

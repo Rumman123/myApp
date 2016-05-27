@@ -2,34 +2,30 @@
 
 /**
  * @ngdoc overview
- * @name myAppApp
+ * @name myApp
  * @description
- * # myAppApp
+ * # myApp
  *
  * Main module of the application.
  */
-angular
-  .module('myAppApp', [
-    'ngAnimate',
-    'ngCookies',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngTouch'
-  ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/main', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/main'
-      });
-  });
+
+var myApp = angular.module('myApp',['ui.router', 'rcForm']);
+
+myApp.config(function($stateProvider,$urlRouterProvider){
+
+    $stateProvider
+        .state('main',{
+            url: '/main',
+            controller: 'MainCtrl',
+            controllerAs: 'main',
+            templateUrl: '../views/main.html'
+        })
+        .state('content',{
+            url: '/add-content',
+            controller: 'ContentCtrl',
+            controllerAs: 'content',
+            templateUrl: '../views/add-content.html'
+        });
+
+    $urlRouterProvider.otherwise('/main');
+})
